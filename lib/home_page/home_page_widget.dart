@@ -30,8 +30,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 alignment: AlignmentDirectional(0, 0),
                 child: Image.asset(
                   'assets/images/S__38707241.jpg',
-                  width: MediaQuery.of(context).size.width * 0.6,
-                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: 200,
+                  height: 180,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -96,17 +96,38 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
               Stack(
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(0, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                      child: Image.asset(
-                        'assets/images/s_0n7v.jpg',
-                        width: MediaQuery.of(context).size.width,
-                        fit: BoxFit.cover,
+                  if (responsiveVisibility(
+                    context: context,
+                    phone: false,
+                    tablet: false,
+                  ))
+                    Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Image.asset(
+                          'assets/images/s_0n7v.jpg',
+                          width: 400,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
+                  if (responsiveVisibility(
+                    context: context,
+                    tabletLandscape: false,
+                    desktop: false,
+                  ))
+                    Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Image.asset(
+                          'assets/images/s_0n7v.jpg',
+                          width: MediaQuery.of(context).size.width,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   Align(
                     alignment: AlignmentDirectional(0, 0),
                     child: Padding(
