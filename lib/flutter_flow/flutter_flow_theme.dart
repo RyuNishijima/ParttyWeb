@@ -101,16 +101,16 @@ class LightModeTheme extends FlutterFlowTheme {
 
 class DarkModeTheme extends FlutterFlowTheme {
   Color primaryColor = const Color(0xFF4B39EF);
-  Color secondaryColor = const Color(0x00000000);
-  Color tertiaryColor = const Color(0x00000000);
+  Color secondaryColor = const Color(0xFF101213);
+  Color tertiaryColor = const Color(0xFFFF533D);
   Color alternate = const Color(0xFFFF5963);
-  Color primaryBackground = const Color(0x00000000);
-  Color secondaryBackground = const Color(0xFF101213);
-  Color primaryText = const Color(0x00000000);
-  Color secondaryText = const Color(0xFF95A1AC);
+  Color primaryBackground = const Color(0xFFFFFFFF);
+  Color secondaryBackground = const Color(0xFFFFFFFF);
+  Color primaryText = const Color(0xFF373737);
+  Color secondaryText = const Color(0xFF57636C);
 
   Color primaryBtnText = Color(0xFFFFFFFF);
-  Color lineColor = Color(0xFF22282F);
+  Color lineColor = Color(0xFFE0E3E7);
 }
 
 extension TextStyleHelper on TextStyle {
