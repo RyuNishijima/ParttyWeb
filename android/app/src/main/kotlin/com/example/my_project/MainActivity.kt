@@ -1,4 +1,4 @@
-package com.flutterflow.parttywebsite
+package com.mycompany.parttywebsite
 
 import io.flutter.embedding.android.FlutterActivity
 

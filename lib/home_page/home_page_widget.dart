@@ -2,6 +2,8 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../prepare/prepare_widget.dart';
+import '../privacy_policy/privacy_policy_widget.dart';
+import '../terms/terms_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -29,7 +31,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 Align(
                   alignment: AlignmentDirectional(0, 0),
                   child: Image.asset(
-                    'assets/images/S__38707241.jpg',
+                    'assets/images/partty_logo.png',
                     width: 200,
                     height: 180,
                     fit: BoxFit.cover,
@@ -167,6 +169,119 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                     ),
                   ],
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 180,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFEEEEEE),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(-0.8, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                          child: InkWell(
+                            onTap: () async {
+                              await launchURL('https://www.landest.co.jp');
+                            },
+                            child: Text(
+                              '会社概要',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    decoration: TextDecoration.underline,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-0.8, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => TermsWidget(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              '利用規約',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    decoration: TextDecoration.underline,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-0.8, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PrivacyPolicyWidget(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'プライバシーポリシー',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    decoration: TextDecoration.underline,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-1, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                          child: Text(
+                            'インターネット異性紹介事業 届出済み 受理番号：62220011000',
+                            textAlign: TextAlign.justify,
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 10,
+                                    ),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-1, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                          child: Text(
+                            '©Landest Inc. All Rights Reserved.',
+                            textAlign: TextAlign.justify,
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 10,
+                                    ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
