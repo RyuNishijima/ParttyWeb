@@ -115,47 +115,53 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     fontSize: 10,
                                   ),
                         ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                              child: InkWell(
-                                onTap: () async {
-                                  await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => PrepareWidget(),
-                                    ),
-                                  );
-                                },
-                                child: SvgPicture.asset(
-                                  'assets/images/black_appstore_logo.svg',
-                                  width: 120,
-                                  height: 70,
-                                  fit: BoxFit.contain,
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 120,
+                                height: 50,
+                                decoration: BoxDecoration(),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PrepareWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: SvgPicture.asset(
+                                    'assets/images/black_appstore_logo.svg',
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
-                            ),
-                            InkWell(
-                              onTap: () async {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => PrepareWidget(),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PrepareWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    'assets/images/google-play-badge.png',
+                                    width: 150,
+                                    height: 60,
+                                    fit: BoxFit.contain,
                                   ),
-                                );
-                              },
-                              child: Image.asset(
-                                'assets/images/google-play-badge.png',
-                                width: 150,
-                                height: 60,
-                                fit: BoxFit.contain,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Stack(
                           children: [
